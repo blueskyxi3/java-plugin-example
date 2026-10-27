@@ -1,0 +1,7 @@
+/target/
+/data/
+/.env
+/web/node_modules/
+/web/.vite/
+/web/build/
+*.log

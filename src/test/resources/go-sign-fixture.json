@@ -1,0 +1,13 @@
+{
+  "claims": {
+    "user_id": 123,
+    "plugin_id": "java-example",
+    "method": "GET",
+    "uri": "/api/v1/self?tag=a%2Fb\u0026tag=two",
+    "request_id": "req-go",
+    "expires_at": 1791700030
+  },
+  "now": 1791700000,
+  "secret": "0123456789abcdef0123456789abcdef",
+  "token": "eyJ1c2VyX2lkIjoxMjMsInBsdWdpbl9pZCI6ImphdmEtZXhhbXBsZSIsIm1ldGhvZCI6IkdFVCIsInVyaSI6Ii9hcGkvdjEvc2VsZj90YWc9YSUyRmJcdTAwMjZ0YWc9dHdvIiwicmVxdWVzdF9pZCI6InJlcS1nbyIsImV4cGlyZXNfYXQiOjE3OTE3MDAwMzB9.lfq1X6e02znwQhaciPnVyU21Ei8j94hCzDoGU37m2jE"
+}

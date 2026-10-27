@@ -1,0 +1,22 @@
+name: java-example-dev
+services:
+  java-example-dev:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: ai-hub-java-example-dev:1.0.0
+    environment:
+      JAVA_EXAMPLE_HOST_SECRET: ${JAVA_EXAMPLE_HOST_SECRET:?Set a shared secret of at least 32 characters in ../.env}
+      JAVA_EXAMPLE_DATA_DIR: /app/data
+      JAVA_EXAMPLE_SERVER_PORT: "8080"
+      SPRING_WEB_RESOURCES_STATIC_LOCATIONS: file:/app/frontend/assets/,classpath:/assets/
+      JAVA_TOOL_OPTIONS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+    ports:
+      - "127.0.0.1:${JAVA_EXAMPLE_DEV_BACKEND_PORT:-3014}:8080"
+      - "127.0.0.1:${JAVA_EXAMPLE_DEV_DEBUG_PORT:-5005}:5005"
+    volumes:
+      - java-example-dev-data:/app/data
+      - ./build:/app/frontend:ro
+
+volumes:
+  java-example-dev-data:

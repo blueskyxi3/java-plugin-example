@@ -1,0 +1,29 @@
+{
+  "name": "ai-hub-java-example-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "^20.19.0 || >=22.12.0" },
+  "scripts": {
+    "dev": "vite",
+    "dev:mock": "vite --mode mock",
+    "dev:hub": "vite build --watch --mode hub",
+    "build": "vite build",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "backend:up": "npm run build && docker compose --env-file ../.env -f compose.yaml up -d --build --wait",
+    "backend:down": "docker compose --env-file ../.env -f compose.yaml down",
+    "backend:logs": "docker compose --env-file ../.env -f compose.yaml logs -f java-example-dev"
+  },
+  "dependencies": {
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@mui/material": "5.18.0",
+    "axios": "1.18.1",
+    "i18next": "23.16.8",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-i18next": "14.1.3",
+    "react-router-dom": "6.21.3"
+  },
+  "devDependencies": { "vite": "7.1.11" }
+}

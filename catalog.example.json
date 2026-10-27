@@ -1,0 +1,24 @@
+{
+  "manifest": {
+    "id": "java-example",
+    "name": "Java 示例",
+    "version": "1.0.0",
+    "sdk_version": 2,
+    "extensions": [
+      "site.navigation",
+      "user.identity.enrich",
+      "user.profile.card"
+    ],
+    "entry": "/assets/plugin.js"
+  },
+  "description": "Spring Boot SDK v2 示例：顶部导航、身份扩展与个人资料卡片，无数据库。",
+  "logo": "/plugin-logos/java-example.svg",
+  "modes": ["external"],
+  "packages": {},
+  "trial_days": 7,
+  "purchase_days": 0,
+  "env_prefix": "JAVA_EXAMPLE",
+  "external_url": "http://127.0.0.1:3013",
+  "secret_env": "JAVA_EXAMPLE_HOST_SECRET",
+  "rollback_compatible": true
+}
