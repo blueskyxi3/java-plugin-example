@@ -10,7 +10,7 @@
 | `user.identity.enrich` | `/internal/profile`、`/internal/bootstrap` | 宿主当前用户响应中的 `data.extensions["java-example"]` |
 | `user.profile.card` | 前端 `ProfileCard({profile})` | 个人资料抽屉及快捷面板中的 Java 身份卡片 |
 
-最低宿主要求：支持 [SDK v2 规范 1.4](../ai-hub/.req/plugins/plugin-development-standard-sdk-v2.md) 的三个扩展点、`/api/plugin-bridge/:id/*` 和内部运行配置协议。以 AI Hub 仓库 `3e94e4f28` 及当前协议实现为兼容基线，不使用旧 `/api/plugins/:id/*` 代理地址。
+最低宿主要求：支持 [SDK v2 规范 1.4](https://github.com/blueskyxi3/ai-hub/blob/main/.req/plugins/plugin-development-standard-sdk-v2.md) 的三个扩展点、`/api/plugin-bridge/:id/*` 和内部运行配置协议。以 AI Hub 仓库 `3e94e4f28` 及当前协议实现为兼容基线，不使用旧 `/api/plugins/:id/*` 代理地址。
 
 **前端源码统一在 `web/`，支持 JSX 与拆分组件。**进入 `web/` 执行 `npm ci`、`npm run dev:mock`，即可脱离 AI Hub 调界面；`npm run dev` 连接真实 Java，`npm run dev:hub` 监听构建供 AI Hub 联调。具体操作见 [前端开发与联调](web/README.md)。
 

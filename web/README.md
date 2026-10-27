@@ -15,10 +15,10 @@ web/
 
 `main.jsx` 先准备 `window.AIHubPluginSDK`，再加载 `plugin.jsx`。在 AI Hub 中，宿主提供 SDK 并直接加载构建后的 `plugin.js`，不使用独立预览 HTML、工具栏或模拟用户。业务组件始终使用 SDK 的 React、MUI、API 和国际化能力。
 
-首次在本目录执行：
+首次在插件根目录执行：
 
 ```sh
-cd java-plugin-example/web
+cd web
 npm ci
 ```
 
